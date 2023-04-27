@@ -5,7 +5,11 @@ import java.util.Scanner;
 
 public class MainClassFromLesson1 {
     public static void main(String[] args) {
-        exOne();
+//        exOne();
+//        exTwo();
+//        ex3();
+//        ex4();
+        ex5();
     }
 
     private static void exOne() {
@@ -32,6 +36,19 @@ public class MainClassFromLesson1 {
     }
 
     private static void ex5() {
-
+        int [] arr = new int[] {1, 1, 0, 1, 1, 1, 0, 1};
+        int counter = 0;
+        int result = 0;
+        for (int num : arr) {
+            if (num == 1) {
+                counter++;
+                if (counter > result) {
+                    result = counter;
+                }
+            } else {
+                counter = 0;
+            }
+        }
+        System.out.printf("Naibolshaya posledovatelnost '1' : %s", result);
     }
 }
