@@ -4,7 +4,9 @@ public class Main {
     public static void main(String[] args) {
 //        printChars();
 //        task2();
-        returnLengthN();
+//        returnLengthN();
+        stringCompression();
+        strCompresVar2();
     }
 
     private static void printChars() {
@@ -39,5 +41,47 @@ public class Main {
             }
         }
         System.out.println(c);
+    }
+
+    private static void stringCompression() {
+        String str = "aaaabbbcdd";
+        StringBuilder res = new StringBuilder();
+        int count = 1;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == str.charAt(i + 1)) {
+                count++;
+            } else {
+                if (count > 1) {
+                    res.append(str.charAt(i)).append(count);
+                } else {
+                    res.append(str.charAt(i));
+                }
+                count = 1;
+            }
+        }
+        res.append(str.charAt(str.length() - 1)).append(count);
+        System.out.println(res);
+    }
+
+    private static void strCompresVar2() {
+        String str = "aaaabbbccdeefff";
+        StringBuilder res = new StringBuilder();
+        int count = 1;
+
+        for (int i = 0; i < str.length()-1; i++) {
+            if (count == 1 & str.charAt(i) != str.charAt(i+1)) {    // если символ не повторяется, то 1 не пишется (d)
+                res.append(str.charAt(i));
+            }
+            else if (str.charAt(i) == str.charAt(i+1)) {
+                count++;
+            }
+            else {
+                res.append(str.charAt(i)).append(count);
+                count=1;
+            }
+        }
+        res.append(str.charAt(str.length()-1)).append(count);
+
+        System.out.println(res);
     }
 }
