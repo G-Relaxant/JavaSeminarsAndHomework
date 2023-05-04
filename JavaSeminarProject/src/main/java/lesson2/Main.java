@@ -1,13 +1,21 @@
 package lesson2;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 public class Main {
     public static void main(String[] args) {
 //        printChars();
 //        task2();
 //        returnLengthN();
-        stringCompression();
-        strCompresVar2();
-        strCompresVar3();
+
+//        stringCompression();
+//        strCompresVar2();
+//        strCompresVar3();
+//        strCompresVar4Prepoda();
+
+        dirToStrArr("/home/Danya/Рабочий стол/JavaSeminarsAndHomework/JavaSeminarProject");
     }
 
     private static void printChars() {
@@ -103,5 +111,61 @@ public class Main {
         res.append(str.charAt(str.length() - 1));
         res.append(count > 1 ? count : "");             // тернарный оператор | ? - if yes | : - if no(else) |
         System.out.println(res);
+    }
+
+    private static void strCompresVar4Prepoda() {
+        String longString = "aaaabbbcddaaa";
+        StringBuilder shortStringSB = new StringBuilder();
+        char[] charStringArr = longString.toCharArray();
+        char curr = 0;
+        char next = 0;
+        int counter = 0;
+
+        for (int i = 0; i < charStringArr.length - 1; i++) {
+            counter++;
+            curr = charStringArr[i];
+            next = charStringArr[i + 1];
+            if (curr != next) {
+                shortStringSB.append(curr);
+                shortStringSB.append((counter > 1) ? counter : "");
+                counter = 0;
+            }
+        }
+        shortStringSB.append(curr);
+        shortStringSB.append((counter >= 1) ? counter + 1 : "");
+        System.out.printf("%s -> %s%n", longString, shortStringSB);
+    }
+
+    private static void dirToStrArr(String pathDir) {
+        File file = new File(pathDir);
+        if (!file.isDirectory()) {
+            return;
+        }
+
+        String[] dirListNames = file.list();
+        StringBuilder sb = new StringBuilder();
+
+        for (String fileName : dirListNames) {
+            sb.append(fileName).append(System.lineSeparator());
+        }
+//        System.out.println(sb);
+
+//        PrintWriter pw = null;
+//        try {   // try-catch = правило-исключение, необходимо для стабильности работы программы и предотвращения сбоев
+//            pw = new PrintWriter
+//                    ("/home/Danya/Рабочий стол/JavaSeminarsAndHomework/JavaSeminarProject/src/main/resources/files/lalala.txt");
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
+//        pw.print(sb);
+//        pw.close();           // PrintWriter необходимо закрывать вручную(этой командой), если pw вызвана не try, то есть try(не здесь)
+
+        try(PrintWriter pw = new PrintWriter
+                ("/home/Danya/Рабочий стол/JavaSeminarsAndHomework/JavaSeminarProject/src/main/resources/files/lalala.txt")) {
+            pw.print(sb);
+//            pw.close();       // здесь эта команда не нужна, try закроет pw автоматически
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
