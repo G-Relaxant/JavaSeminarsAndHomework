@@ -1,4 +1,4 @@
-package lesson3;
-
-public class Main {
-}
+//package lesson3;
+//
+//public class Main {
+//}
