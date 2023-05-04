@@ -7,6 +7,7 @@ public class Main {
 //        returnLengthN();
         stringCompression();
         strCompresVar2();
+        strCompresVar3();
     }
 
     private static void printChars() {
@@ -27,7 +28,7 @@ public class Main {
 
     private static void returnLengthN() {
         int n = 11;
-        StringBuilder a = new StringBuilder("a"); // vrode kak menshiy rashod pamyati (bolee effektivno)
+        StringBuilder a = new StringBuilder("a");  // vrode kak menshiy rashod pamyati (bolee effektivno)
 //        StringBuilder b = new StringBuilder("b"); // vrode kak menshiy rashod pamyati (bolee effektivno)
 //        String a = "a";
         String b = "b";
@@ -82,6 +83,25 @@ public class Main {
         }
         res.append(str.charAt(str.length()-1)).append(count);
 
+        System.out.println(res);
+    }
+
+    private static void strCompresVar3() {
+        String str = "aaaabbbcddr";
+        StringBuilder res = new StringBuilder();
+        int count = 1;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) != str.charAt(i + 1)) {
+                res.append(str.charAt(i));
+                if (count > 1) {
+                    res.append(count);
+                }
+                count = 0;
+            }
+            count++;
+        }
+        res.append(str.charAt(str.length() - 1));
+        res.append(count > 1 ? count : "");             // тернарный оператор | ? - if yes | : - if no(else) |
         System.out.println(res);
     }
 }
