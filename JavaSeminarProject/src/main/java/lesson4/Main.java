@@ -1,3 +1,4 @@
+/*
 package lesson4;
 
 import java.util.*;
@@ -249,3 +250,4 @@ public class Main {
         return num >= 1 & num <= size;
     }
 }
+*/
