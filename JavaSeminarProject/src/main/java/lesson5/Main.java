@@ -1,3 +1,4 @@
+/*
 package lesson5;
 
 import java.io.File;
@@ -149,3 +150,4 @@ public class Main {
         }
     }
 }
+*/
