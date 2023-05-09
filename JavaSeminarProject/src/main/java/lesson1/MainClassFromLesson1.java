@@ -1,3 +1,4 @@
+/*
 package lesson1;
 
 import java.util.Arrays;
@@ -88,3 +89,4 @@ public class MainClassFromLesson1 {
         return maxCount;
     }
 }
+*/

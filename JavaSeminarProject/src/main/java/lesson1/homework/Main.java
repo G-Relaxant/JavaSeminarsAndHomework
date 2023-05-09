@@ -1,3 +1,4 @@
+/*
 package lesson1.homework;
 
 public class Main {
@@ -16,3 +17,4 @@ public class Main {
 
     }
 }
+*/
