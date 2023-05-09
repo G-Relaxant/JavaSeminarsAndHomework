@@ -12,19 +12,19 @@ public class MainCats {
         Cat cat8 = new Cat(8, 6, "Busya", "african", "female", "20220930", "black");
 
         System.out.println();
-//        System.out.printf("%s , %s , %d", cat3.firstName, cat3.colour, cat3.age);
-//        System.out.println();
-//        System.out.printf("%s , %s , %d", cat1.firstName, cat1.colour, cat1.age);
-//
-//        System.out.println();
-//        System.out.println();
-//        System.out.println();
-//
-//        System.out.println(cat1);
-//        System.out.println(cat2);
-//        System.out.println(cat3);
-//
-//        System.out.println(cat4.getId());
+        System.out.printf("%s , %s , %d", cat3.firstName, cat3.colour, cat3.age);
+        System.out.println();
+        System.out.printf("%s , %s , %d", cat1.firstName, cat1.colour, cat1.age);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        System.out.println(cat1);
+        System.out.println(cat2);
+        System.out.println(cat3);
+
+        System.out.println(cat4.getId());
 
 
         System.out.println(cat1.getFirstName());    // @Getter 30-34
