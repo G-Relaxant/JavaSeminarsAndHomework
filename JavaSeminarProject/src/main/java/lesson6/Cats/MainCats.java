@@ -1,3 +1,4 @@
+/*
 package lesson6.Cats;
 
 import java.util.Scanner;
@@ -29,7 +30,7 @@ public class MainCats {
 //        System.out.println(cat4.getId());
 //
 //
-//        System.out.println(cat1.getFirstName());    // @Getter 30-34
+//        System.out.println(cat1.getFirstName());    // @Getter 33-37
 //        System.out.println(cat1.getColour());
 //        System.out.printf("id = %d , %s , age = %d", cat1.getId(), cat3.getSpecies(), cat3.getAge());
 //        System.out.println();
@@ -77,3 +78,4 @@ public class MainCats {
         System.out.println(cat8);
     }
 }
+*/

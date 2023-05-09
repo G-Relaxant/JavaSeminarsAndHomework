@@ -1,3 +1,4 @@
+/*
 package lesson6;
 
 import java.util.Arrays;
@@ -29,3 +30,4 @@ public class UniqValsCount {
         return 1.0 * set.size() * 100 / arr3.length;
     }
 }
+*/

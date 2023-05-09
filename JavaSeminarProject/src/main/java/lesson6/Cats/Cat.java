@@ -1,3 +1,4 @@
+/*
 package lesson6.Cats;
 
 import lombok.AllArgsConstructor;
@@ -11,7 +12,7 @@ import java.util.Scanner;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor     // вместо 23-31
+@AllArgsConstructor     // вместо 25-33
 public class Cat {
     private int id;
     int age;
@@ -59,3 +60,4 @@ public class Cat {
 //        return id;
 //    }
 }
+*/
