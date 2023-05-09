@@ -1,7 +1,12 @@
 package lesson6.Cats;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Objects;
 
+@Getter
+@Setter
 public class Cat {
     private int id;
     int age;
@@ -11,7 +16,7 @@ public class Cat {
     String lastVisit;
     String colour;
 
-    public Cat(int id, int age, String firstName, String species, String sex, String lastVisit, String colour) {  // вместо этого блока работает @AllArgsConstructor
+    public Cat(int id, int age, String firstName, String species, String sex, String lastVisit, String colour) {
         this.id = id;
         this.age = age;
         this.firstName = firstName;
@@ -49,7 +54,7 @@ public class Cat {
         return String.format("%d %s %s %d %s %s", id, firstName, sex, age, species, colour);
     }
 
-    public int getId() {
-        return id;
-    }
+//    public int getId() {      // вместо этого и аналогичных методов работает @Getter/setter
+//        return id;
+//    }
 }
