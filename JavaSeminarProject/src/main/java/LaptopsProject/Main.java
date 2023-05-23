@@ -27,7 +27,6 @@ public class Main {
             Scanner in = new Scanner(System.in);
             String read = in.nextLine();
             int get = Integer.parseInt(read);
-//            System.out.println(get);
 
             if (get == 1) {
                 System.out.print("Закрыть каталог (y/n): ");
@@ -209,33 +208,3 @@ public class Main {
         return rslt;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
